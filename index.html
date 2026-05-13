@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Cửa hàng sách Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION BẬC 2 -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h2><i class="fas fa-book"></i> BookStore</h2>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-home"></i> Trang chủ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#home">Giới thiệu</a></li>
+                            <li><a href="#about">Liên hệ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-book"></i> Danh mục
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#programming">Lập trình</a></li>
+                            <li><a href="#business">Kinh doanh</a></li>
+                            <li><a href="#novel">Tiểu thuyết</a></li>
+                            <li><a href="#selfhelp">Kỹ năng</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">
+                            <i class="fas fa-shopping-bag"></i> Sản phẩm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cart" class="nav-link">
+                            <i class="fas fa-shopping-cart"></i> Giỏ hàng (0)
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Khám phá thế giới sách</h1>
+                <p>Hàng ngàn đầu sách chất lượng cao với giá ưu đãi</p>
+                <button class="cta-btn" onclick="scrollToProducts()">Mua ngay</button>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Sản phẩm nổi bật</h2>
+                <div class="product-grid" id="productGrid">
+                    <!-- Sản phẩm sẽ được load bằng JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Giỏ hàng của bạn</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <strong>Tổng: <span id="cartTotal">0đ</span></strong>
+            </div>
+            <button class="checkout-btn">Thanh toán</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BookStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery & Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
